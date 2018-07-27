@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    </head>
+<title>Hello world</title>
+    
+<body>
+    <p>The First Global village</p>
+    
+    <script>     
+        const today=new Date();
+         const  day=today.getDay();
+         const  week=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+        console.log(`Today is ${week[day]}`);
+        
+        let hour=today.getHours();
+        const minute=today.getMinutes();
+        const millisecond=today.getMilliseconds();
+        let X =(hour >=12)? "AM": "PM";
+        hour = (hour >=12)? hour -12 : hour ;
+
+       if(hour==0 && X==="AM"){ 
+           if(minute===0 && X==="AM"){
+             if(second===0){
+                 hour=hour ;
+                 X= "midnight";
+                } 
+               else{
+                   hour=hour;
+                   X="AM";
+                  }
+             }
+           else{
+            hour=hour;
+            X="AM";        
+             }        
+         }
+                        
+         if(hour===0 && X==="PM"){
+         if(minute===0 && X==="PM"){
+             if(second===0){
+                 hour=hour -12 ;
+                 X= "noon";
+                 }
+               else{
+                   hour=hour-12;
+                   X="PM";
+                  }
+                 
+             }
+           else{
+            hour=hour-12;
+            X="PM";        
+             }     
+         }
+              
+
+         console.log(`NOW is ${hour} : ${minute} : ${second} : ${millisecond} ${X}`);      
+        
+    </script>
+  
+    
+    </body>
+
+
+</html>
