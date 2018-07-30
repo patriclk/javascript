@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Get the Area of Triangle</title>
+    </head>
+    
+    
+    <body>
+        <p id="x"></p>
+        
+        <script>
+        const a = 5;
+        const b = 6 ;
+        const c = 7;
+        const abc = (a + b + c)/2;
+        
+         console.log(abc);
+       var E =Math.sqrt(abc*(abc-a)*(abc-b)*(abc-c));
+      const F=(`The triangel has three length of it, it is ${a},${b},${c}. So the area of the triangle is ${E}.`);
+        
+        document.getElementById("x").innerHTML= F;
+        
+        
+        
+        </script>
+        
+        
+    </body>
+</html>
