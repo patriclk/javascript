@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Exactly Date</title>
+    </head>
+    
+    <body>
+        <h1>how to get the date for today</h1>
+        <p id="date"></p>
+        
+        <script>
+            
+            const X = new Date();
+            const today =X.getDate();
+            const month=X.getMonth() + 1;
+            const year=X.getFullYear();
+            
+           
+           const A = `${today}/${month}/${year}`;
+            
+            document.getElementById("date").innerHTML = A ;
+        
+        
+        
+        
+        
+        </script>
+    </body>
+</html>
