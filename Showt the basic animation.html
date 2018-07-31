@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>Show the basic animation</title>
+    </head>
+    
+    <!-- get the basic animation in javasctipt. skr skr
+    -->
+    
+    
+    <body onload="basic_animation('x')"
+        <pre id="x">w3resource </pre> 
+    </body>
+
+     <script type="text/javascript">
+       
+       function basic_animation(id)
+            {
+                const a = document.getElementById(id);
+                const b = a.childNodes[0];
+                let c = b.data;              
+          
+        
+        setInterval(()=>{
+          c=c[c.length -1] + c.substring(0,c.length -1);
+          b.data = c ;
+        },100); 
+        }
+        </script>
+</html>
