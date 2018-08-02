@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>get the leap years</title>
+    </head>
+    
+<body>  
+    <p id="text"></p>
+    
+    
+    <script>
+   const year = window.prompt("Input a Year:");
+   var isLeap = false;
+        
+        
+   if(year % 4 === 0){
+         if(year % 100 ===0){
+              if(year % 400 ===0){
+                  isLeap = true;
+              }
+         }
+         else{
+             isLeap = true;
+         }
+   }
+          
+        
+        
+   if(isLeap){
+       document.getElementById("text").innerHTML=`${year} is a leap year`;
+       
+   }else{
+       document.getElementById("text").innerHTML=`${year} is not a leap year`;
+    }
+ 
+
+    
+    </script>
+    </body>
+
+
+
+
+</html>
