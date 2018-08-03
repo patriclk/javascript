@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess a right number</title>
+    </head>
+    
+    <p>Click the button to get more information</p>
+    <button onclick ="myFunction()">Click it</button>
+    <p id="result"></p>
+    
+    <!-- Guess a right number
+    -->
+    
+    <script>
+    function myFunction(){
+        var number = "Math.ceil(Math.random()*10)";
+        console.log(`${number}`);
+        var randomnumber=window.prompt('Guess the right number between 1 and 10');
+                
+        if(randomnumber == number){
+            document.getElementById("result").innerHTML=`You are right`;
+        } else {
+            document.getElementById("result").innerHTML=`You are wrong, The right number is ${number}`;
+        }      
+    }
+     
+    </script>
+    
+    
+    
+    <body>
+    </body>
+</html>
