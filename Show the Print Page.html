@@ -18,7 +18,7 @@
          const today=new Date();
          const  day=today.getDay();
          const  week=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-         let X=`Today is ${week[day]}, The Wealther is not bad`;
+         let X=`Today is ${week[day-1]}, The Wealther is not bad`;
         
             
         document.getElementById("Today").innerHTML=X ;
