@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <titl>Get the result of Mutiple and Devide</titl>
+    </head>
+    
+    <style>
+        body{
+            margin: 10px;}
+    </style>
+    <body>
+        <form>
+             1st Number :<input type="text" id="firstNumber" /> <br>
+             2st Number  :<input type="text" id="secondNumber"/> <br>
+            <input type="button" onclick="multipleBy()" Value="multiply" />
+            <input type="button" onclick="devideBy()"  Value="devide"  />
+        </form>
+        
+        <p id="result"></p>
+        
+        <script>
+            function multipleBy(){
+                var input1 = document.getElementById("firstNumber").value;
+                var input2 = document.getElementById("secondNumber").value;
+                var result=document.getElementById("result").innerHTML= `The result is ${input1*input2}`;               
+            }
+            function devideBy(){
+                var input3 = document.getElementById("firstNumber").value;
+                var input4 = document.getElementById("secondNumber").value;
+                var result1=document.getElementById("result").innerHTML= `The result1 is ${input3/input4}`;
+                
+            }
+        </script>
+    </body>
+    
+    
+     
+</html>

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>DAN
+<head>Kiwi & YI
     </head>
 <body onload="myFunction()">
-    <p id="result"></p>
+   <p id="result"></p>
     <script>
-    function myFunction(){
-    var day = new Date();
-    console.log(`${day}`);
-    
-    var firstDay = new Date(2018,5,15);
-    console.log(`${firstDay}`);
-        
-    var oneDay= 1000*60*60*24;
-       
-    var calculate = Math.ceil((day.getTime()-firstDay.getTime())/oneDay);
-    
-    document.getElementById("result").innerHTML = `We have been together in ${calculate} days`;
-        
-    }
+        function myFunction(){
+            var day = new Date();
+            console.log(`${day}`);
+
+            var firstDay = new Date(2018,5,15);
+            console.log(`${firstDay}`);
+
+            var oneDay= 1000*60*60*24;
+
+            var calculate = Math.ceil((day.getTime()-firstDay.getTime())/oneDay);
+
+            document.getElementById("result").innerHTML = `We have been together in ${calculate} days`;
+        }     
 
     </script>
     </body>
