@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Use split and pop method</title>
+    </head>
+    
+    <body onload="myFunction()">
+        <h1>How to use split and pop method</h1>
+        <ol id="result">
+            <li>The output is here:</li>
+        </ol>
+        
+        <script>
+            var output;
+            
+            function myFunction(){
+             var filename = `system.php`;
+             var filename1 = `abc.js`;
+             output=(filename.split(".").pop()); 
+             function1(output);               
+                
+             output=(filename1.split(".").pop()); 
+             function1(output);
+   
+            }
+            
+            function function1(output){
+                var li = document.createElement("li");
+                var text = document.createTextNode(`The result is ${output}`);
+                li.appendChild(text);
+                document.body.appendChild(li);
+            }
+            
+        </script>
+    </body>
+</html>
