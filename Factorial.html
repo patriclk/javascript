@@ -1,0 +1,43 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+      <meta charest ="UTF-8">
+      <meta name="viewport" content="width=device-width">
+
+      <title>Get random number compare with 13.</title>
+  </head>
+
+  <body onload="console.log(factorial(10));">
+      <p id="result"></p>
+
+      <script>
+          function myFunction(n){
+              if (n<=13){
+                  var end= 13 - n;
+                  }else{
+                      var end =((n-13)*2);
+                  }
+              document.getElementById("result").innerHTML=`The final result is ${end}`;
+          }
+
+
+          function factorial(n) {
+
+              if(n <= 0) {
+                  return 1;
+              }
+
+              return n * factorial(n-1);
+
+
+          }
+
+      </script>
+
+  </body>
+
+
+
+
+
+</html>
