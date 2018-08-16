@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <title>JavaScript excerrcise 16</title>
+    </head>
+    <body onload="myFunction(10,20)">
+        <h1>JavaScript  exercise 16</h1>
+        <p>Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.</p>
+        <p>The result is :</p>
+        <ul>
+
+        </ul>
+        <script>
+            function myFunction(x,y){
+                if (x == y) {
+                    var result = 3 * (x+y) ;
+                }else{
+                    result = (x+y);
+                }
+
+           var newElement = document.createElement("li");
+           var text = document.createTextNode(`${result}`);
+           newElement.appendChild(text);
+           document.body.appendChild(newElement);
+            }
+
+        </script>
+    </body>
+</html>
