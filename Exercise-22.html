@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-22</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise 22 </h1>
+        <p>Write a JavaScript program to remove a character at the specified position of a given string and return the new string.</p>
+        <ol>
+            <li>The Result is :</li>
+            <li id="result1"></li>
+            <li id="result2"></li>
+            <li id="result3"></li>
+        </ol>
+        <script>
+            function Use_substring(str,number){
+                process_1 =str.substring(0,number);
+                process_2 = str.substring(number+1 ,str.length);
+
+                return (process_1+process_2);
+            }
+              document.getElementById("result1").innerHTML = (Use_substring("Python",0));
+              document.getElementById("result2").innerHTML = (Use_substring("Python",3));
+              document.getElementById("result3").innerHTML = (Use_substring("Python",5));
+        </script>
+
+    </body>
+</html>
