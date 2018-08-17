@@ -3,34 +3,34 @@
     <head>
         <title>Get Exactly Date</title>
     </head>
-    
+
     <body>
         <h1>how to get the date for today</h1>
         <p id="date"></p>
-        
-        
+
+
     <!--Get the exactly date of the year in Javascript. Skr skr :
-    -->   
+    -->
         <script>
-            
+
             const X = new Date();
             const today =X.getDate();
             const month=X.getMonth() + 1;
             const year=X.getFullYear();
-            
+
            if(today >10 ){
                today = `0${today}`;
            }
-            
+
            if(month > 10){
                month = `0${month}`;
            }
-            
-            
+
+
            const A = `${today}/${month}/${year}`;
-            
+
             document.getElementById("date").innerHTML = A ;
-        
+
         </script>
     </body>
 </html>

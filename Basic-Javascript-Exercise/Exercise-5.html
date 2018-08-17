@@ -3,36 +3,36 @@
     <head>
         <title>Show the basic animation</title>
     </head>
-    
+
     <!-- get the basic animation in javasctipt. skr skr
     -->
-    
-    
+
+
     <body onload="basic_animation('x')">
-        <pre id="x">w3resource </pre> 
+        <pre id="x">w3resource </pre>
     </body>
 
      <script type="text/javascript">
-       
-    
-         
-         
-         
+
+
+
+
+
         function basic_animation(id) {
            const element = document.getElementById(id);
-           
+
            const elementText = element.childNodes[0];
-          
-           let text = elementText.data;  
+
+           let text = elementText.data;
       );
-                     
+
            setInterval(()=>{
                 text = text[text.length -1] + text.substring(0,text.length -1);
-                
+
                elementText.data = text ;
-    
-           },100); 
+
+           },100);
         }
-         
+
      </script>
 </html>

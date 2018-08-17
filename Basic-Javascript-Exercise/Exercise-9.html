@@ -10,21 +10,21 @@
      var day = new Date();
      var nextOne = new Date(day.getFullYear(),11,25);
     console.log(`${nextOne}`);
-        
+
       if(day.getMonth == 11 && day.getDate >= 25){
           nextOne.setFullYear(nextOne.getFullYear()+1);
       }
     var oneDay = 1000 * 60 * 60 * 24 ;
-    
+
     var restDay = Math.ceil((nextOne.getTime()-day.getTime())/oneDay);
-    
+
     document.getElementById("Result").innerHTML= `The Rest of the day to Christmas is ${restDay}`;
-            
+
     }
-     
-    
+
+
     </script>
-    
+
     </body>
 
 

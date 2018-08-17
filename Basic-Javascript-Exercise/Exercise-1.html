@@ -3,31 +3,31 @@
 <head>
     </head>
 <title>Hello world</title>
-    
+
 <body>
     <p>Get the day of the day</p>
-    
+
     <!-- Get the exactly time of the day in Javascript. Skr skr :
     -->
-    
-    <script>     
+
+    <script>
         const today=new Date();
          const  day=today.getDay();
          const  week=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
         console.log(`Today is ${week[day]}`);
-        
+
         let hour=today.getHours();
         const minute=today.getMinutes();
         const millisecond=today.getMilliseconds();
         let X =(hour >=12)? "AM": "PM";
         hour = (hour >=12)? hour -12 : hour ;
 
-       if(hour==0 && X==="AM"){ 
+       if(hour==0 && X==="AM"){
            if(minute===0 && X==="AM"){
              if(second===0){
                  hour=hour ;
                  X= "midnight";
-                } 
+                }
                else{
                    hour=hour;
                    X="AM";
@@ -35,10 +35,10 @@
              }
            else{
             hour=hour;
-            X="AM";        
-             }        
+            X="AM";
+             }
          }
-                        
+
          if(hour===0 && X==="PM"){
          if(minute===0 && X==="PM"){
              if(second===0){
@@ -48,20 +48,20 @@
                else{
                    hour=hour-12;
                    X="PM";
-                  }                 
+                  }
              }
            else{
             hour=hour-12;
-            X="PM";        
-             }     
+            X="PM";
+             }
          }
-              
 
-         console.log(`NOW is ${hour} : ${minute} : ${second} : ${millisecond} ${X}`);      
-        
+
+         console.log(`NOW is ${hour} : ${minute} : ${second} : ${millisecond} ${X}`);
+
     </script>
-  
-    
+
+
 
 
 

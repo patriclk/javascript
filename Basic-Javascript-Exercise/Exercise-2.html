@@ -2,33 +2,33 @@
 <html>
 <head>
     <title>Print the Page</title>
-    
+
     </head>
 <body>
     <h1>Lisbon</h1>
     <p id ="Today"></p>
     <button onclick ="print()">Find more details over here</button>
-    
-      <!-- 
+
+      <!--
       Get the print button in javascript. Skr skr
       -->
-    
+
     <script>
-        
+
          const today=new Date();
          const  day=today.getDay();
          const  week=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
          let X=`Today is ${week[day-1]}, The Wealther is not bad`;
-        
-            
+
+
         document.getElementById("Today").innerHTML=X ;
-        
-        
+
+
     function print(){
         window.print();
     }
-        
+
     </script>
     </body>
-    
+
 </html>

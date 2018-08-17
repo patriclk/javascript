@@ -7,11 +7,11 @@
 <body>
     <!-- Check in which year the first day is Sunday.skr skr
     -->
-    
+
     <p id="day"></p>
-    
+
     <script>
-        
+
     for( var year=2014; year<=2050;year++)
         {
             var day=new Date();
@@ -19,12 +19,12 @@
             if(day.getDay===0){
                 document.getElementById("day").innerHTML=`In ${year} the first day of January is Sunday`;
             }
-            
+
         }
-    
-    
+
+
     </script>
-    
+
     </body>
 
 

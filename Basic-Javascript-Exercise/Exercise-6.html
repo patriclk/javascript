@@ -3,18 +3,18 @@
 <head>
      <title>get the leap years</title>
     </head>
-    
-<body>  
+
+<body>
     <p id="text"></p>
-    
+
    <!-- Check the year is a leap year.skr skr
    -->
-    
+
     <script>
    const year = window.prompt("Input a Year:");
    var isLeap = false;
-        
-        
+
+
    if(year % 4 === 0){
          if(year % 100 ===0){
               if(year % 400 ===0){
@@ -25,18 +25,18 @@
              isLeap = true;
          }
    }
-          
-        
-        
+
+
+
    if(isLeap){
        document.getElementById("text").innerHTML=`${year} is a leap year`;
-       
+
    }else{
        document.getElementById("text").innerHTML=`${year} is not a leap year`;
     }
- 
 
-    
+
+
     </script>
     </body>
 
