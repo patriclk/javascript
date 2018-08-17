@@ -7,41 +7,41 @@
         <ul id="result">
             <li>Results:</li>
         </ul>
-        
+
         <script>
-            
-            
+
+
             function myFunction() {
                myFunction1(60);
                myFunction2(45);
             }
-            
-            
+
+
            function myFunction1(input1) {
                 var C =(9 * input1 + (32 *5 )) /5 ;
                 var text = `${input1}\xB0C is ${C}\xB0F.`;
-                addElement(text);              
+                addElement(text);
             }
-            
+
             function myFunction2(input2) {
                 var F = ((input2-32) * 5) /9 ;
                 var text = `${input2}\xB0F is ${F}\xB0C .`;
                 addElement(text);
             }
-            
+
             //create a new element.
             function addElement(text) {
                var li = document.createElement("li");
                var node = document.createTextNode(text);
                li.appendChild(node);
                var element = document.getElementById("result");
-               element.appendChild(li);  
+               element.appendChild(li);
             }
-            
-      
+
+
         </script>
     </body>
-    
+
 
 
 

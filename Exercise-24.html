@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-24</title>
+    </head>
+    <body>
+
+       <script>
+      window.alert(`Exercise-24 \nWrite a JavaScript program to create a new string from a given string with the first character of the given string added at the front and back.`);
+
+            var character = window.prompt("Tell me what is your name");
+
+            function add_character(character){
+                var first_character = character.substring(0,1);
+                return (first_character + character + first_character);
+              }
+
+                   window.alert(`The final result is` + ` ` +add_character(character));
+                   window.alert(`The final result is` + ` ` +add_character("a"));
+                   window.alert(`The final result is` + ` ` +add_character("ab"));
+                   window.alert(`The final result is` + ` ` +add_character("abc"));
+        </script>
+    </body>
+</html>
