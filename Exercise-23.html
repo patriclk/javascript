@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-23</title>
+    </head>
+    <body>
+        <h1>Javascript Exercise-23</h1>
+        <p>Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1.</p>
+
+        <script>
+            function Use_charAt(newString){
+                if(newString.length <=1){
+                    return newString;
+                }else{
+                    mid_character= newString.substring(1,newString.length -1);
+                    return (newString.charAt(newString.length-1) + mid_character + newString.charAt(0));
+
+                }
+
+            }
+            window.alert(Use_charAt("a"));
+            window.alert(Use_charAt("ab"));
+            window.alert(Use_charAt("abc"));
+        </script>
+
+    </body>
+</html>
