@@ -6,20 +6,20 @@
     <body>
 
        <script>
-            window.alert(`Hey,Welcome!`);
+      window.alert(`Here is belong to YI.`);
 
             var character = window.prompt("Tell me what is your name");
 
             function add_character(character){
                 if (character === "mafalda"){
-                    return (`Amor, You are so beautiful today`);
-                }else{
-                    return(`This is not the right answer`);
-                }
-
+                  return (`Amor, mafalda. You are so beautiful today.`);
+              }else{
+                  return(character+ `. `+`This is wrong answer, Please try it again.`);
+              }
+            }
 
                    window.alert(add_character(character));
-            }
+
         </script>
     </body>
 </html>
