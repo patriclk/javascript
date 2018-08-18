@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-25</title>
+    </head>
+    <body>
+        <h1>Exercise-25</h1>
+        <p>Write a JavaScript program check if a given positive number is a multiple of 3 or a multiple of 7.</p>
+        <ul>
+            <li id="result"></li>
+
+        </ul>
+        <script>
+                var input = window.prompt(`Please enter a number`);
+                function myFunction(input){
+                if(input % 3 == 0  || input % 7 ==0 ){
+
+                   return ( input+ `. this is true`);
+                }else{
+                   return(  input+ `. this is wrong`); ;
+                }
+            }
+                document.getElementById("result").innerHTML= myFunction(input);
+
+
+        </script>
+    </body>
+</html>
