@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-25</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-25</h1>
+        <p>Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more.</p>
+
+        <script>
+            var input = window.prompt(`Please enter a string`);
+            function myFunction(input){
+                if (typeof input === 'string' && input.length >=3){
+                    last_character = input.substring(input.length-3,input.length);
+                    return(last_character + input + last_character);
+                }else{
+                    return(`This is not a string or The length of string is less than 3`);
+                }
+
+            }
+            window.alert(myFunction(input));
+        </script>
+    </body>
+</html>

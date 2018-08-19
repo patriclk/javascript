@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-27</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-27</h1>
+        <p>Write a JavaScript program to check if a string starts with 'Java' and false otherwise.</p>
+
+        <script>
+            function myFunction(input){
+                if(typeof input === 'string' && input.slice(0,4) ==='java' && input.length >4){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            window.alert(myFunction("javascript"));
+            window.alert(myFunction("script"));
+            window.alert(myFunction("abc"));
+        </script>
+    </body>
+</html>

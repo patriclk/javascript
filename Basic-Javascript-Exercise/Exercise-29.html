@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-29</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-29</h1>
+        <p>Write a JavaScript program to check if three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range.</p>
+
+        <script>
+            const input1 = window.prompt(`Please enter a number1`);
+            const input2 = window.prompt(`Please enter a number2`);
+            const input3 = window.prompt(`Please enter a number3`);
+
+
+            if(Number.isInteger(input1,input2,input3)){
+                 myFunction();
+             }else{
+                 window.alert(`Sorry this is not a Number`);
+                myFunction1();
+                  function myFunction1(){
+                return;
+            }
+             }
+
+            function myFunction(input1,input2,input3){
+              if((input1 >=50 && input1 <=99) || (input2 >=50 && input2 <=99) ||(input2 >=50 && input2 <=99)){
+                  return (`It is right`);
+              }else{
+                  return(`It is wrong`);
+              }
+            }
+
+
+
+            window.alert(myFunction(input1,input2,input3));
+        </script>
+    </body>
+</html>
