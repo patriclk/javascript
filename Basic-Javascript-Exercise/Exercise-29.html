@@ -8,28 +8,15 @@
         <p>Write a JavaScript program to check if three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the said range.</p>
 
         <script>
-            const input1 = window.prompt(`Please enter a number1`);
-            const input2 = window.prompt(`Please enter a number2`);
-            const input3 = window.prompt(`Please enter a number3`);
+            var input1 = window.prompt(`Please enter a number1`);
+            var input2 = window.prompt(`Please enter a number2`);
+            var input3 = window.prompt(`Please enter a number3`);
 
-
-            if(Number.isInteger(input1,input2,input3)){
-                 myFunction();
-             }else{
-                 window.alert(`Sorry this is not a Number`);
-                myFunction1();
-                  function myFunction1(){
-                return;
+            if(typeof input1 == 'number'){
+                console.log(`this is right`);
             }
-             }
 
-            function myFunction(input1,input2,input3){
-              if((input1 >=50 && input1 <=99) || (input2 >=50 && input2 <=99) ||(input2 >=50 && input2 <=99)){
-                  return (`It is right`);
-              }else{
-                  return(`It is wrong`);
-              }
-            }
+
 
 
 
