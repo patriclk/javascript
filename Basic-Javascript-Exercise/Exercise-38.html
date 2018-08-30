@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-38</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-38</h1>
+        <p>Write a JavaScript program to check the total marks of a student in various examinations. The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is "Final-exam." the student will get A+ grade where total marks must be greater than or equal to 90. Return true if the student get A+ grade or false otherwise.</p>
+
+        <form>
+            Input :<input type="text"  id="input" /><br>
+            It is final exam?  <br>
+            <input type="radio" name="input1" id="YES">YES<br>
+            <input type="radio" name="input1" id="NO">NO<br>
+
+            Score:<input type="text"  id="output" /><br>
+            <input type="button" onclick="myFunction()"  value="Execute" />
+        </form>
+
+        <script>
+            function myFunction(){
+                var in1 = document.getElementById("input").value;
+                var radioYEs = document.getElementById("YES").checked;
+                var radioNO = document.getElementById("NO").checked;
+
+
+
+                if(radioYEs){
+                    if(in1 >=90){
+                        document.getElementById("output").value= `A+`;
+                    }else{
+                        document.getElementById("output").value=(`Not good to get A+`);
+                    }
+                }else if(radioNO){
+                    if(in1 >=89 && in1<=100){
+                        document.getElementById("output").value=`A+`;
+                    }else{
+                        document.getElementById("output").value=(`Not good to get A+`);
+                    }
+
+                }else{
+                    window.alert(`Please select the option`);
+                }
+
+            }
+        </script>
+    </body>
+</html>

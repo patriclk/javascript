@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-32</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-32</h1>
+        <p>Write a JavaScript program to find a value which is nearest to 100 from two different given integer values.</p>
+        <br>
+        <form>
+            The First Number :<input type="text" name="input1" id="input1" /><br>
+            The Second Number:<input type="text" name="input2" id="input2" /><br>
+            The result:<input type="number" name="result" id="result" /><br>
+            <input type="button" onclick="myFunction()" value="Result"/>
+        </form>
+        <p id="x"></p>
+        <script>
+            function myFunction(){
+
+                var in1 = document.getElementById("input1").value;
+                var in2 = document.getElementById("input2").value;
+                var N1;
+                var N2;
+
+
+                if(in1 != in2){
+                  N1=Math.abs(100-in1);
+                  N2=Math.abs(100-in2);
+                }else{
+                    return false;
+                }
+
+                if(N1>N2){
+                    document.getElementById("result").value = in2;
+                }else{
+                    document.getElementById("result").value = in1;
+                }
+            }
+        </script>
+    </body>
+</html>
