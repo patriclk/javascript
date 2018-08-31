@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-39</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-39</h1>
+        <p>Write a JavaScript program to compute the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+        </style>
+        <form>
+            FirstNumber : <input type="number" id="first" /> <br>
+            SecondNumber : <input type="number" id="second" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+            Result :<input type="text" id="result" />
+        </form>
+
+        <script>
+            function myFunction(){
+            var input1=parseInt(document.getElementById("first").value,10);
+            var input2=parseInt(document.getElementById("second").value,10);
+                  console.log(input1);
+                  console.log(input2);
+
+            const x = input1 + input2 ;
+                  console.log(x);
+            if(x>= 60 && x<= 80){
+                document.getElementById("result").value=65;
+           }else{
+                 document.getElementById("result").value=80;
+            }
+
+
+
+            }
+        </script>
+    </body>
+</html>

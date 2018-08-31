@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-43</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-43</h1>
+        <p>Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            FirstNumber : <input type="number" id="first" /> <br>
+            SecondNumber : <input type="number" id="second" /> <br>
+            ThridNumber:<input type="number" id="thrid" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+            Result :<input type="text" id="result" />
+        </form>
+
+        <script>
+            function myFunction(){
+            var input1=parseInt(document.getElementById("first").value,10);
+            var input2=parseInt(document.getElementById("second").value,10);
+            var input3=parseInt(document.getElementById("thrid").value,10);
+
+            var Lastinput1=input1.toString().split("").pop();
+            var Lastinput2=input2.toString().split("").pop();
+            var Lastinput3=input3.toString().split("").pop();
+
+
+                if( Lastinput1 == Lastinput2 && Lastinput2 == Lastinput3){
+                    document.getElementById("result").value=`Three input are all True.`;
+                }else if(Lastinput1 == Lastinput2 || Lastinput2 == Lastinput3 || Lastinput1 == Lastinput3){
+                    document.getElementById("result").value=`Two of input are all True.`;
+                }else{
+                    document.getElementById("result").value=`None of input are all True.`;
+                }
+
+
+            }
+        </script>
+    </body>
+</html>
