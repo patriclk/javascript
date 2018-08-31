@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Exercise-24</title>
+        <title>x_code</title>
     </head>
     <body>
+        <h1>Code Practice</h1>
+        <p>Get know you further...</p>
 
-       <script>
-            window.alert(`Hey,Welcome!`);
+         <style>
+             h1{
+                 font-family:fantasy;
+                 font-size: 45px;
+             }
 
-            var character = window.prompt("Tell me what is your name");
+            p, form, input {
+                font-size: 25px;
+                font-family: cursive;
+            }
 
-            function add_character(character){
-                if (character === "mafalda"){
-                    return (`Amor, You are so beautiful today`);
+             #text1{
+                 color:chocolate;
+
+             }
+
+             #text2{
+                 color:chocolate;
+             }
+        </style>
+
+        <form>
+           <p id="text1"> Who is my girlfriend ?</p>
+            <span  id="name">Name</span>:<input type="text"  id="input" /><br>
+            <br>
+            <p id="text2">Do you miss Tab ?</p>
+            <input type="radio" name="input1" id="YES">YES<br>
+            <input type="radio" name="input1" id="NO">NO<br>
+
+
+            <input type="button" onclick="myFunction()"  value="Execute" /><br>
+            <br>
+            End:<input type="text"  id="output" /><br>
+        </form>
+
+        <script>
+            function myFunction(){
+                var in1 = document.getElementById("input").value;
+                var radioYEs = document.getElementById("YES").checked;
+                var radioNO = document.getElementById("NO").checked;
+
+
+
+
+                if(in1 === "kiwi"){
+                    window.alert("welcome to here, My little cute.")
                 }else{
-                    return(`This is not the right answer`);
+                     return window.alert(`Sorry, You are not my love.`);
                 }
 
 
-                   window.alert(add_character(character));
+
+                if(radioYEs){
+                        document.getElementById("output").value= `Também saudades de ti.`;
+                    }
+                    else if(radioNO){
+                       return window.alert(`I don´t miss you either. :( `);
+                    }
+
+                else{
+                    window.alert(`Please select the option.`);
+                }
+
             }
         </script>
     </body>
