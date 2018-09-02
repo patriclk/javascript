@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-34</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-34</h1>
+        <p>Write a JavaScript program to find the larger number from the two given positive integers, the two numbers are in the range 40..60 inclusive.</p>
+
+        <script>
+            var input1 =window.prompt("Enter the first number");
+            var input2=window.prompt("Enter the second number");
+
+            function myFunction(input1,input2){
+                if(input1 >= 40 && input1 <=60 && input2 >=40 && input2 <=60){
+                    return Math.max(input1,input2);
+                }else{
+                    return false;
+                }
+
+            }
+            window.alert(myFunction(input1,input2));
+
+        </script>
+    </body>
+</html>

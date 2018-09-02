@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-37</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-37</h1>
+        <p>Write a JavaScript program to create a new string with first 3 characters are in lower case from a given string. If the string length is less than 3 convert all the characters in upper case.</p>
+
+        <form>
+            Input :<input type="text"  id="input" /><br>
+            Output:<input type="text"  id="output" /><br>
+            <input type="button" onclick="myFunction()"  value="Execute" />
+        </form>
+
+        <script>
+            function myFunction(){
+                var x = document.getElementById("input").value;
+
+                if(x.length < 3){
+                  document.getElementById("output").value=x.toUpperCase();
+                }
+                first_part = (x.substring(0,3).toLowerCase());
+                rest_part=x.substring(3,x.length);
+                document.getElementById("output").value=first_part+ rest_part;
+            }
+
+        </script>
+
+    </body>
+</html>

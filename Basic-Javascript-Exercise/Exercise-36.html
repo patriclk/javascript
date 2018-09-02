@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-36</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-36</h1>
+        <p>Write a JavaScript program to check if the last digit of the three given positive integers is same.</p>
+
+        <script>
+            var input =window.prompt("Tell me the first number");
+            var input1 =window.prompt("Tell me the second number");
+            var input2 =window.prompt("Tell me the thrid number");
+
+
+            function myFunction(input,input1,input2){
+                var x=input.toString().split("").pop();
+                var y=input1.toString().split("").pop();
+                var z=input2.toString().split("").pop();
+
+                if(x == y && x == z && y==z ){
+                    return (`this is right`);
+                }else{
+                    return(`this is wrong`);
+                }
+
+            }
+            window.alert(myFunction(input,input1,input2));
+        </script>
+
+    </body>
+</html>

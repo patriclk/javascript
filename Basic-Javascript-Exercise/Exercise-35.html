@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-35</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-35</h1>
+        <p>Write a JavaScript program to check a given string contains 2 to 4 numbers of a specified character.</p>
+
+        <script>
+            var input = window.prompt("Enter a string please");
+            var character = window.prompt("Enter a character please");
+
+            function myFunction(input,character){
+                var a =0;
+                for(let i =0 ; i<input.length;i++){
+                    if(input.charAt(i) == character){
+                        a++;
+                    }
+                }
+              return(a >=2 && a <=4);
+            }
+            window.alert(myFunction(input,character));
+        </script>
+    </body>
+</html>

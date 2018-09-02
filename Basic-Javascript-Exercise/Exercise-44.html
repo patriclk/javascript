@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-44</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-44</h1>
+        <p>Write a JavaScript program to check from three given integers that if a number is greater than or equal to 20 and less than one of the others.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            FirstNumber : <input type="number" id="first" /> <br>
+            SecondNumber : <input type="number" id="second" /> <br>
+            ThridNumber:<input type="number" id="thrid" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+            var input1=parseInt(document.getElementById("first").value,10);
+            var input2=parseInt(document.getElementById("second").value,10);
+            var input3=parseInt(document.getElementById("thrid").value,10);
+
+            if(input1 >= 20){
+                if( input1 < input2 || input1 <input3){
+                     window.alert('The first number is less than another one of them.')
+                }else{
+                     window.alert('The first number is bigger than another one of them.')
+                }
+
+            }else{
+                window.alert('The first number is less than 20.')
+            }
+
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-42</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-42</h1>
+        <p>Write a JavaScript program to check if three given numbers are increasing in strict mode or in soft mode.
+Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            FirstNumber : <input type="number" id="first" /> <br>
+            SecondNumber : <input type="number" id="second" /> <br>
+            ThridNumber:<input type="number" id="thrid" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+            Result :<input type="text" id="result" />
+        </form>
+
+        <script>
+            function myFunction(){
+            var input1=parseInt(document.getElementById("first").value,10);
+            var input2=parseInt(document.getElementById("second").value,10);
+            var input3=parseInt(document.getElementById("thrid").value,10);
+
+               if(input1 < input2 && input2 <input3){
+                   document.getElementById("result").value= `Strict mode.`;
+               }else if(input3>input2){
+                   document.getElementById("result").value= `Soft mode.`;
+               }else{
+                   document.getElementById("result").value= `Undefined mode.`;
+               }
+
+            }
+        </script>
+    </body>
+</html>
