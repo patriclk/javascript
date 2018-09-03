@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-31</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-31</h1>
+        <p>Write a JavaScript program to find the largest of three given integers.</p>
+
+        <form>
+             1st Number :<input type="text" id="firstNumber" /> <br>
+             2st Number :<input type="text" id="secondNumber"/> <br>
+             3st Number :<input type="text" id="thridNumber"/> <br>
+            <input type="button" onclick="myFunction()" Value="compare" />
+        </form>
+
+        <p id="result"></p>
+
+        <script>
+            // show result in form by javascript
+
+
+            function myFunction(){
+            var input1 = document.getElementById("firstNumber").value;
+            var input2 = document.getElementById("secondNumber").value;
+            var input3 = document.getElementById("thridNumber").value;
+
+            var result1 = Math.max(input1,input2,input3);
+
+
+                document.getElementById("result").innerHTML=`The Biggest number is ${result1}`;
+            }
+
+
+
+        </script>
+    </body>
+</html>
