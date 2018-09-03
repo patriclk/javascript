@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-46</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-46</h1>
+        <p>Write a JavaScript program to check two given non-negative integers and if one of the number (not both) is multiple of 7 or 11.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            FirstNumber : <input type="number" id="first" /> <br>
+            SecondNumber : <input type="number" id="second" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+            var input1=parseInt(document.getElementById("first").value,10);
+            var input2=parseInt(document.getElementById("second").value,10);
+                console.log(input1 %7);
+                 console.log(input1 %11);
+                 console.log(input2 %7);
+                 console.log(input2 %11);
+
+             if(input1 % 7 ===0 || input1 % 11 ===0 ||input2 % 7 ===0  || input2 % 11 ===0 ){
+                 window.alert(`One of the input can devided by 7 or 11.`);
+             }else{
+                 window.alert(`This is wrong.`);
+             }
+
+          }
+        </script>
+    </body>
+</html>
