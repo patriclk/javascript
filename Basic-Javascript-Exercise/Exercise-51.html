@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-51</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-51</h1>
+        <p>Write a JavaScript program to convert a given number to hours and minutes.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            Enter : <input type="number" id="first" /> <br>
+            End: <input type="text" id="second" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = parseInt(document.getElementById("first").value,10);
+                var hours = Math.floor(input/60);
+                var minutes= ((input % 60)) ;
+                 var time = hours + ":" + minutes;
+                 document.getElementById("second").value = time ;
+          }
+
+        </script>
+    </body>
+</html>

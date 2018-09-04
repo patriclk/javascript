@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-50</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-50</h1>
+        <p>Write a JavaScript program to capitalize the first letter of each word of a given string.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            Enter : <input type="text" id="first" /> <br>
+            End: <input type="text" id="second" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+              input = input.split(" ");
+                for(var i = 0 ; i < input.length ; i++){
+                    input[i] = input[i][0].toUpperCase() + input[i].substr(1);
+                }
+
+                document.getElementById("second").value =  input.join(" ");
+
+          }
+
+        </script>
+    </body>
+</html>
