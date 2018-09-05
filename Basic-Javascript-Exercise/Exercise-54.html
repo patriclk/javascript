@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise-54</title>
+    </head>
+    <body>
+        <h1>JavaScript Exercise-54</h1>
+        <p>Write a JavaScript program to count the number of vowels of a given string.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: left;
+            }
+        </style>
+        <form>
+            Enter : <input type="text" id="first" /> <br>
+            End: <input type="text" id="second" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+                var end = input.match(/[aeiou]/gi).length;
+                document.getElementById("second").value = end ;
+
+            }
+        </script>
+    </body>
+</html>
