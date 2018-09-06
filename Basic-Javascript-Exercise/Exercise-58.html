@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-58</title>
+    </head>
+
+
+    <body>
+        <h1>JavaScript Exercise-58</h1>
+        <p>Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string. The length of the given string must be 3 and above.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            Enter  a  String: <input type="text" id="first" /> <br>
+            Enter  a Number:<input type="number" id="second"/><br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+              var input_number= parseInt(document.getElementById("second").value,10);
+
+              if(input.length >3 && input_number >= 1){
+                  var Last3 = input.slice(input.length-3,input.length);
+                  var end =Last3.repeat(input_number);
+                  document.getElementById("result").value = end;
+              }else{
+                  document.getElementById("result").value = input;
+              }
+
+
+          }
+
+        </script>
+    </body>
+</html>

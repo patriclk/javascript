@@ -7,33 +7,55 @@
         <h1>JavaScript Exercise-49</h1>
         <p>Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.</p>
 
-                function string_reverse(str)
-                function LetterChanges(text) {
-                //https://goo.gl/R8gn7u
-                var s = text.split('');
-                for (var i = 0; i < s.length; i++) {
-                // Caesar cipher
-                switch(s[i]) {
-                case ' ':
-                break;
-                case 'z':
-                s[i] = 'a';
-                break;
-                case 'Z':
-                s[i] = 'A';
-                break;
-                default:
-                s[i] = String.fromCharCode(1 + s[i].charCodeAt(0));
-                }
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
 
-                // Upper-case vowels
-                switch(s[i]) {
-                case 'a': case 'e': case 'i': case 'o': case 'u':
-                s[i] = s[i].toUpperCase();
+        <form>
+            Enter : <input type="text" id="first" /> <br>
+            End: <input type="text" id="second" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+              var inputToString =input.split("");
+
+              for(var i =0 ; i<inputToString.length;i++){
+                switch(inputToString[i]){
+                  case ' ':
+                     break;
+                  case 'z':
+                     inputToString[i]='a';
+                     break;
+                  case 'Z':
+                     inputToString[i]='A';
+                     break;
+                  default:
+                     inputToString[i]=String.fromCharCode(inputToString[i].charCodeAt(0)+1);
+                  }
+
+                switch(inputToString[i]){
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                inputToString[i]=inputToString[i].toUpperCase();
                 }
-                }
-                return s.join('');
-                }
-                console.log(LetterChanges("PYTHON"));
-                console.log(LetterChanges("W3R"));
-                console.log(LetterChanges("php"));
+            }
+
+                var result = inputToString.join("");
+                document.getElementById("second").value = result;
+
+          }
+        </script>
+    </body>
+</html>

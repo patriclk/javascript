@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Exercise-57</title>
+    </head>
+
+
+    <body>
+        <h1>JavaScript Exercise-57</h1>
+        <p>Write a JavaScript program to create a new string of specified copies (positive number) of a given string.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            Enter  a  String: <input type="text" id="first" /> <br>
+            Enter  a Number:<input type="number" id="second"/><br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+              var input_number= parseInt(document.getElementById("second").value,10);
+
+               if (input.length > 1 && input_number >1){
+                   var result = input.repeat(input_number);
+                   document.getElementById("result").value = result;
+               }else{
+                   document.getElementById("result").value=input;
+               }
+
+          }
+
+        </script>
+    </body>
+</html>
