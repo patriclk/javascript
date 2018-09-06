@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-60</title>
+    </head>
+
+
+    <body>
+        <h1>JavaScript Exercise-60</h1>
+        <p>Write a JavaScript program to create a new string without the first and last character of a given string.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 210px; text-align: right;
+            }
+        </style>
+        <form>
+            Enter  a  String: <input type="text" id="first" /> <br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+              var midString = input.slice(1,input.length-1);
+                console.log(midString);
+                document.getElementById("result").value = midString;
+            }
+
+        </script>
+    </body>
+</html>
