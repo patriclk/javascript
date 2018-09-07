@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-62</title>
+    </head>
+
+
+    <body>
+        <h1>JavaScript Exercise-62</h1>
+        <p>Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form>
+            Enter the first String: <input type="text" id="first" /> <br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+
+              if(input.length >= 6){
+                var last3 = input.slice(-3);
+                  console.log(last3);
+                var first3 =input.slice(0,-3);
+                  console.log(first3);
+                var result = last3+first3;
+                  console.log(result);
+                document.getElementById("result").value = result;
+              }else{
+                document.getElementById("result").value = input;
+              }
+            }
+        </script>
+    </body>
+</html>

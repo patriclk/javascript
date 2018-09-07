@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-61</title>
+    </head>
+
+
+    <body>
+        <h1>JavaScript Exercise-61</h1>
+        <p>Write a JavaScript program to concatenate two strings except their first character.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form>
+            Enter the first String: <input type="text" id="first" /> <br>
+            Enter the Second String: <input type="text" id="second" /> <br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+              var input2 = document.getElementById("second").value;
+
+
+                if(input.length >1 && input2.length >1){
+                    var first1= input.slice(1);
+                    var first2 = input2.slice(1);
+                    var result = first1.concat(first2);
+                    document.getElementById("result").value = result;
+                }else{
+                    document.getElementById("result").value = `Please enter a string.`;
+                }
+
+
+
+            }
+        </script>
+    </body>
+</html>

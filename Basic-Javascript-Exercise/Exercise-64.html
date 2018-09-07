@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-64</title>
+    </head>
+
+
+    <body>
+        <h1>JavaScript Exercise-64</h1>
+        <p>Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form>
+            Enter the first string: <input type="text" id="first" /> <br>
+            Enter the second string: <input type="text" id="second" /> <br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value
+              var input2= document.getElementById("second").value;
+
+                if(input.length == input2.length){
+                    var result =input.concat(input2);
+                    document.getElementById("result").value = result;
+                }else{
+                    let m =Math.min(input.length,input2.length);
+                    //var n = input.substring(input.length-m);
+                    //var a =input2.substring(input2.length-m);
+                    //var result=n.concat(a);
+
+                    if(input.length > input2.length) {
+                        var result = input.slice(-m).concat(input2);
+                        document.getElementById("result").value=result;
+                    }
+                    else {
+                        var result = input.concat(input2.slice(-m));
+                        document.getElementById("result").value=result;
+                    }
+
+
+
+
+
+
+
+                }
+
+            }
+        </script>
+    </body>
+</html>
