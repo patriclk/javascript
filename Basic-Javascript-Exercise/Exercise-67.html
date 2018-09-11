@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-67</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Exercise-67</h1>
+        <p>Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form>
+            Enter the first string: <input type="text" id="first" /> <br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+                if(input.charAt(0)=== "P" && input.charAt(input.length-1) ==="P"){
+                    var NewString =input.substring(1,input.length-1);
+                    document.getElementById("result").value = NewString;
+                }else{
+                    document.getElementById("result").value = input;
+                }
+
+            }
+        </script>
+    </body>
+</html>

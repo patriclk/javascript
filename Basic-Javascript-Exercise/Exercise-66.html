@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-66</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Exercise-66</h1>
+        <p>Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form>
+            Enter the first string: <input type="text" id="first" /> <br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+        </form>
+
+        <script>
+            function myFunction(){
+              var input = document.getElementById("first").value;
+                if(input.substring(0,3) === "New" ||input.substring(0,3) === "Los"){
+                    document.getElementById("result").value = `this works.`;
+                }else{
+                    document.getElementById("result").value = `this not works.`;
+                }
+            }
+        </script>
+    </body>
+</html>
