@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-76</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Exercise-76</h1>
+        <p>Write a JavaScript program to create a new array taking the first and last elements from a given array of integers and length must be greater or equal to 1.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form id="myForm">
+            Enter a 1number :<input type="number" id ="first" /><br>
+            Enter a 2number: <input type="number" id="second" /><br>
+            Enter a 3number :<input type="number" id ="thrid" /><br>
+
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+        </form>
+
+
+
+        <script>
+            function myFunction(a){
+            var input1 = parseInt(document.getElementById("first").value,10).toString().split(" ");
+            var input2 = parseInt(document.getElementById("second").value,10).toString().split(" ");
+            var input3 = parseInt(document.getElementById("thrid").value,10).toString().split(" ");
+
+            var stringa = [];
+                for(var i =3;i<4;i++){
+                    stringa.push(input1);
+                    stringa.push(input2);
+                    stringa.push(input3);
+                 }
+
+
+
+            var stringc=[];
+                stringc.push(stringa[0],stringa[2]);
+                 document.getElementById("result").value = stringc;
+
+           }
+
+        </script>
+    </body>
+</html>
