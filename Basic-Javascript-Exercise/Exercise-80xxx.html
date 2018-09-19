@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-80</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Exercise-80</h1>
+        <p>Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1.</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+        <form id="myForm">
+            Enter a 1number :<input type="number" id ="1" /><br>
+            Enter a 2number :<input type="number" id ="2" /><br>
+            Enter a 3number :<input type="number" id ="3" /><br>
+            Enter a 4number :<input type="number" id ="4" /><br>
+            End: <input type="text" id="result" /> <br>
+            <input type="button" onclick="myFunction()" value="Execute" /><br>
+        </form>
+
+        <script>
+            function myFunction(){
+            var input1 = parseInt(document.getElementById("1").value,10).toString().split(" ");
+            var input2 = parseInt(document.getElementById("2").value,10).toString().split(" ");
+            var input3 = parseInt(document.getElementById("3").value,10).toString().split(" ");
+            var input4 = parseInt(document.getElementById("4").value,10).toString().split(" ");
+
+
+                var stringa=[];
+                 stringa.push(input1);
+                 stringa.push(input2);
+                 stringa.push(input3);
+                 stringa.push(input4);
+
+
+                [stringa[0],stringa[stringa.length-1]]=[stringa[stringa.length-1],stringa[0]];
+
+
+
+                //var first= stringa[stringa.length-1];
+                //var mid=stringa[1,stringa.length-1];
+                //var last=stringa[0];
+
+                //var final =last.concat(mid,first);
+
+                   stringa;
+
+
+
+
+                console.log(stringa);
+
+
+            }
+
+        </script>
+    </body>
+</html>

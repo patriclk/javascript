@@ -24,7 +24,7 @@
         </form>
 
         <script>
-            function myFunction(a){
+            function myFunction(input1,input2){
             var input1 = parseInt(document.getElementById("first").value,10).toString().split(" ");
             var input2 = parseInt(document.getElementById("second").value,10).toString().split(" ");
 
@@ -34,15 +34,14 @@
                 console.log(stringa);
 
 
-                var a =stringa.includes(1);
-                var b = stringa.includes(3);
-                   if(a||b){
-                       document.getElementById("result").value = `this is right.`;
-                   }else{
-                       document.getElementById("result").value = `this is not right.`;
-                   }
+               if(stringa.includes(1) || stringa.includes(3)){
+                   return true;
+               }else{
+                   return false;
+               }
 
            }
+            document.getElementById("result").value = myFunction();
 
         </script>
     </body>

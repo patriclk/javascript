@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-81</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Exercise-81</h1>
+        <p>Write a JavaScript program to add two digits of a given positive integer of length two.</p>
+        <p id="result"></p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <script>
+            function myFunction(a){
+             var b =  Math.floor(a/10);
+             var c = a %10;
+             return b+c;
+
+            }
+            console.log(myFunction(25));
+            console.log(myFunction(50));
+
+        </script>
+    </body>
+</html>
