@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-85</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Exercise-85</h1>
+        <p>Write a JavaScript code to divide an given array of positive integers into two parts. First element goes to first part, second element goes to second part, and third element goes to first part and so on. Now compute the sum of two parts and store into an array of size two.</p>
+        <p id="result"></p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <script>
+            function myFunction(str){
+             var newArr =[0,0];
+
+                for(var i =0;i<str.length;i++){
+                if(i % 2){
+                    newArr[1] = str[i]+newArr[1];
+                }else{
+                    newArr[0] = str[i]+newArr[0];
+                }
+
+            }
+                return newArr;
+            }
+             console.log(myFunction([1,2,3,4,5,6]));
+
+        </script>
+    </body>
+</html>
