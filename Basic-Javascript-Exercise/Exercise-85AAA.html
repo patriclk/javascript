@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-86</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-86</h1>
+        <p>Write a JavaScript program to find the types of a given angle.</p>
+         <head>Types of angles:</head>
+        <ol>
+            <li>Acute angle: An angle between 0 and 90 degrees.</li>
+            <li>Right angle: An 90 degree angle.</li>
+            <li>Obtuse angle: An angle between 90 and 180 degrees.</li>
+            <li>Straight angle: A 180 degree angle</li>
+        </ol>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <img src="../images/exercise-86.png"/>
+
+
+
+        <script>
+            function myFunction(){
+                 myFunction1(47);
+                 addElement(text);
+
+                 myFunction1(90);
+                 addElement(text);
+
+                 myFunction1(145);
+                 addElement(text);
+
+                 myFunction1(180);
+                 addElement(text);
+            }
+
+
+            function myFunction1(angel){
+                if(angel <90){
+                    text= `this is acute angel`;
+                }if(angel === 90){
+                    text= `this is right angel`;
+                }if(angel<180 && angel>90){
+                    text = `this is obtuse angel`;
+                }if(angel ===180){
+                    text =`this is straight angel`;
+                }
+            }
+
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+
+
+        </script>
+    </body>
+</html>
