@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-88</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-88</h1>
+        <p>Write a JavaScript program to check whether two given integers are similar or not, if a given divisor divides both integers and it does not divide either.</p>
+
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <img src="../images/exercise-88.png"/>
+
+
+
+        <script>
+            function myFunction(){
+
+                 myFunction1(10,25,5);
+                 addElement(text);
+
+                myFunction1(10,20,5);
+                 addElement(text);
+
+                myFunction1(10,5,4);
+                 addElement(text);
+
+                myFunction1(0,25,5);
+                 addElement(text);
+
+            }
+
+
+            function myFunction1(a,b,divisor){
+               if(a!==0 && b!==0 ){
+                   if(a % divisor ==0 && b%divisor ==0) {
+                    text = `this is result is right.`;
+                   }else{
+                    text=`one of the number couldn't devidede by divisor.`;
+                   }
+
+               }else{
+                   text = `one of the number is 0.`;
+               }
+            }
+
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+
+
+        </script>
+    </body>
+</html>
