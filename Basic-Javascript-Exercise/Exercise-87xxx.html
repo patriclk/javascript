@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-87</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-86</h1>
+        <p>Write a JavaScript program to check whether two arrays of integers of same length are similar or not. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements..</p>
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <img src="../images/exercise-87.png"/>
+
+
+
+        <script>
+            function myFunction(){
+                 myFunction1(47);
+                 addElement(text);
+
+                 myFunction1(90);
+                 addElement(text);
+
+                 myFunction1(145);
+                 addElement(text);
+
+                 myFunction1(180);
+                 addElement(text);
+            }
+
+
+            function myFunction1(angel){
+                if(angel <90){
+                    text= `this is acute angel`;
+                }if(angel === 90){
+                    text= `this is right angel`;
+                }if(angel<180 && angel>90){
+                    text = `this is obtuse angel`;
+                }if(angel ===180){
+                    text =`this is straight angel`;
+                }
+            }
+
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+
+
+        </script>
+    </body>
+</html>
