@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-90</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-90</h1>
+        <p>WWrite a JavaScript program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers.</p>
+
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <img src="../images/exercise-91.png"/>
+
+
+
+        <script>
+            function myFunction(){
+
+                 myFunction1(10,25,35);
+                 addElement(text);
+
+                myFunction1(10,25,250);
+                 addElement(text);
+
+                myFunction1(30,25,5);
+                 addElement(text);
+
+                myFunction1(100,25,4.0);
+                 addElement(text);
+
+                myFunction1(100,25,25);
+                 addElement(text);
+
+
+            }
+
+
+            function myFunction1(x,y,z){
+              if((x +y ==z)||(x-y ==z)||(x*y==z)||(x/y==z)){
+                 text = `we can replace $ between x and y.`;
+              }else{
+                 text=`we can't replace $ between x and y.`;
+              }
+            }
+
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+
+
+        </script>
+    </body>
+</html>
