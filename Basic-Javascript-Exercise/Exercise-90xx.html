@@ -19,38 +19,27 @@
             }
         </style>
 
-        <img src="../images/exercise-91.png"/>
+        <img src="../images/exercise-90.png"/>
 
 
 
         <script>
             function myFunction(){
 
-                 myFunction1(10,25,35);
+                 myFunction1([1,2,3,4,5], 3);
                  addElement(text);
 
-                myFunction1(10,25,250);
+                myFunction1([-10,-25,-47,-36,0], 1);
                  addElement(text);
 
-                myFunction1(30,25,5);
-                 addElement(text);
-
-                myFunction1(100,25,4.0);
-                 addElement(text);
-
-                myFunction1(100,25,25);
-                 addElement(text);
 
 
             }
 
 
-            function myFunction1(x,y,z){
-              if((x +y ==z)||(x-y ==z)||(x*y==z)||(x/y==z)){
-                 text = `we can replace $ between x and y.`;
-              }else{
-                 text=`we can't replace $ between x and y.`;
-              }
+            function myFunction1(arr,k){
+                arr.sort(function(a,b){return b - a});
+                 text = arr[k-1];
             }
 
 
@@ -62,6 +51,28 @@
             }
 
 
+            /*
+               function Kth_greatest_in_array(arr, k) {
+
+                  for (var i = 0; i < k; i++) {
+                    var max_index = i,
+                      tmp = arr[i];
+
+                    for (var j = i + 1; j < arr.length; j++) {
+                      if (arr[j] > arr[max_index]) {
+                        max_index = j;
+                      }
+                    }
+
+                    arr[i] = arr[max_index];
+                    arr[max_index] = tmp;
+                  }
+
+                  return arr[k - 1];
+                }
+
+                confuse about the nested loop.
+                */
 
         </script>
     </body>
