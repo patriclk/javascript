@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-96</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-96</h1>
+        <p>Write a JavaScript program to compute the sum of absolute differences of consecutive numbers of a given array of integers.</p>
+
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <img src="../images/exercise-96.png"/>
+
+
+
+        <script>
+            function myFunction(){
+
+
+                myFunction1([1,2,3,2,-5]);
+                 addElement(text);
+
+
+            }
+
+
+            function myFunction1(arr){
+               let result =0;
+               for(let i=1;i<arr.length;i++){
+                   //why not can set i =0.
+                  result += Math.abs(arr[i]-arr[0]);
+                }
+                text = result;
+            }
+
+
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+        </script>
+    </body>
+</html>
