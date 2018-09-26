@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-98</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-98</h1>
+        <p>Write a JavaScript program to switch case of the minimum possible number of letters to make a given string written in the upper case or in the lower case.
+
+          Fox example "Write" will be write and "PHp" will be "PHP"</p>
+
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <script>
+            function myFunction(){
+                myFunction1("Write");
+                 addElement(text);
+
+                myFunction1("PHp");
+                 addElement(text);
+
+            }
+
+
+            function myFunction1(arr){
+               let result =0;
+               for(let i=1;i<arr.length;i++){
+                   //why not can set i =0.
+                  result += Math.abs(arr[i]-arr[0]);
+                }
+                text = result;
+            }
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+        </script>
+    </body>
+</html>

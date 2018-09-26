@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body onload="myFunction()">
+
+        <script>
+            function myFunction(){
+                var inputArray = [
+                                  [101,109,105,116,108,108,105,104,67],
+                                  [101,109,105,116,67,108,108,105,104],
+                                  [101,109,105,116,108,108,105,104,99],
+                                  [116,110,101,108,69,108,101,99,120]
+                                 ];
+
+                console.log(String.fromCharCode(101,109,105,116,108,108,105,104,67));
+                console.log(String.fromCharCode(101,109,105,116,67,108,108,105,104));
+                console.log(String.fromCharCode(101,109,105,116,108,108,105,104,67));
+                console.log(String.fromCharCode(101,109,105,116,108,108,105,104,99));
+                console.log(String.fromCharCode(116,110,101,108,69,108,101,99,120));
+
+
+
+                  for(var i=0;i<inputArray.length;i++){
+                      for(var j=0;j<inputArray[i].length;j++){
+                          inputArray[i][j]=String.fromCharCode(inputArray[i][j]);
+                      }
+                      regexp=/[A-Z]/g;
+                      if(regexp.test(inputArray[i])){
+
+
+
+
+                      }else{
+                          var eachArray=inputArray[i].join("").toUpperCase();
+                            console.log(eachArray);
+                      }
+
+
+                  }
+
+
+
+
+
+
+
+
+            }
+
+        </script>
+    </body>
+</html>

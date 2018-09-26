@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-97</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-97</h1>
+        <p>Write a JavaScript program to find the shortest possible string which can create a string to make it a palindrome by adding characters to the end of it.</p>
+
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <script>
+            function myFunction(){
+                myFunction1([1,2,3,2,-5]);
+                 addElement(text);
+            }
+
+
+            function myFunction1(arr){
+               let result =0;
+               for(let i=1;i<arr.length;i++){
+                   //why not can set i =0.
+                  result += Math.abs(arr[i]-arr[0]);
+                }
+                text = result;
+            }
+                /*
+                    function build_Palindrome(new_str) {
+                      var flag;
+                      for (var i = new_str.length;; i++) {
+                        flag = true;
+                        for (var j = 0; j < i - j - 1; j++) {
+                          if (i - j - 1 < new_str.length && new_str[j] != new_str[i - j - 1]) {
+                            flag = false;
+                            break;
+                          }
+                        }
+                        if (flag) {
+                          for (var j = new_str.length; j < i; j++) {
+                            new_str += new_str[i - j - 1];
+                          }
+                          return new_str;
+                        }
+                      }
+                    }
+               */
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+
+        </script>
+    </body>
+</html>
