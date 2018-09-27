@@ -4,6 +4,7 @@
     </head>
     <body onload="array_element_replace()">
         <script>
+
              /*
             function myFunction(){
                 var arr = [[1,2], [3,4], [5,6]];
@@ -14,6 +15,8 @@
                 }
             }
             */
+
+
             /*
 
                 function array_element_replace(arr, old_value, new_value) {
@@ -28,11 +31,32 @@
 
                 console.log(array_element_replace(num, 2, 5));
                 */
+
+            /*
             var str = 'thisIsAString';
         var matches = str.match(/[A-Z]/g);
           console.log(matches);
             console.log(matches[0]);
             console.log(matches[1]);
+            */
+            function  array_element_replace(){
+
+            var inputString =["e","m","i","t","H","l","i","h","c"];
+            var positions = [];
+            for(var i=0; i<inputString.length; i++){
+                if(inputString[i].match(/[A-Z]/) != null){
+                    positions.push(i);
+
+                    for(var j =0;j<positions.length;i++){
+                        inputString.unshift(positions[i]);
+                        console.log(inputString);
+                    }
+                }
+            }
+
+            }
+
+
         </script>
     </body>
 </html>
