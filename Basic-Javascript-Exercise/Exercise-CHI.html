@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body onload="myFunction()">
+
+        <script>
+            function myFunction(){
+                var inputArray = [
+                                  [101,109,105,116,67,108,108,105,104],
+                                  [101,109,105,116,108,108,105,104,99],
+                                  [116,110,101,108,69,108,101,99,120]
+                                 ];
+
+                console.log(String.fromCharCode(101,109,105,116,67,108,108,105,104));
+                console.log(String.fromCharCode(101,109,105,116,108,108,105,104,99));
+                console.log(String.fromCharCode(116,110,101,108,69,108,101,99,120));
+
+
+                  for(var i=0;i<inputArray.length;i++){
+                      var newString =[];
+                      var correctArray = ["c","h","i","l","l","t","i","m","e"];
+                      for(var j=0;j<inputArray[i].length;j++){
+                            inputArray[i][j]=String.fromCharCode(inputArray[i][j]);
+                            var eachCharacter = inputArray[i][j];
+
+                            regexp=/[A-Z]/g;
+                            if(regexp.test(eachCharacter)){
+                                newString.unshift(eachCharacter);
+                            }else{
+                                //newString.push(eachCharacter);
+                                var indexCorrect = correctArray.indexOf(eachCharacter);
+                                if(indexCorrect != -1) {
+                                    newString[indexCorrect] = eachCharacter;
+                                    correctArray[indexCorrect] = null;
+                                }
+                                else {
+                                    console.error("IMPOSSIBLE!");
+                                }
+
+                            }
+
+
+
+                            var endArray =inputArray[i].join("").toString();
+
+                      }
+                      console.log("ANSWER:");
+                      console.log(newString.join("").toString());
+                 }
+          }
+
+        </script>
+    </body>
+</html>

@@ -7,7 +7,7 @@
         <script>
             function myFunction(){
                 var inputArray = [
-                                  [101,109,105,116,108,108,105,104,67],
+
                                   [101,109,105,116,67,108,108,105,104],
                                   [101,109,105,116,108,108,105,104,99],
                                   [116,110,101,108,69,108,101,99,120]
@@ -20,37 +20,43 @@
                 console.log(String.fromCharCode(116,110,101,108,69,108,101,99,120));
 
 
+                  var CorrectArray = ["C","H","I","L","L","T","I","M","E"];
+                  var newString =[];
 
                   for(var i=0;i<inputArray.length;i++){
                       for(var j=0;j<inputArray[i].length;j++){
                           inputArray[i][j]=String.fromCharCode(inputArray[i][j]);
+                            regexp=/[A-Z]/g;
+                          if(regexp.test(inputArray[i])){
+                                for(var k=0; k<inputArray[i].length; k++){
+                                    if(inputArray[i][k].match(/[A-Z]/)!= null){
+                                        newString.unshift(inputArray[i][k]);
+                                    }else{
+                                        newString.push(inputArray[i][k]);
+                                    }
+                                }
+                                for(var b =0; b<newString.length;b++){
+                                   if(CorrectArray[b]!==newString[i][b]){
+                                       newString[i][b]=CorrectArray[b];
+                                   }
+                               }
+                                    var endArray = newString.join("").toString();
+                                       console.log(endArray);
+
+
+
+                          }else{
+                               for(var a =0; a<inputArray[i].length;a++){
+                                   if(CorrectArray[a]!==inputArray[i][a]){
+                                       inputArray[i][a]=CorrectArray[a];
+                                   }
+                               }
+                                var endArray =inputArray[i].join("").toString();
+                                  console.log(endArray);
+                          }
                       }
-                      regexp=/[A-Z]/g;
-                      if(regexp.test(inputArray[i])){
-                         var matches = str.match(/[A-Z]/g);
-                            if(matches.length>1){
-
-                            }else{
-                                var firstUpper = matches[0];
-                                var eachArray=inputArray[i]
-                            }
-
-
-
-
-                      }else{
-                          var eachArray=inputArray[i].join("").toUpperCase();
-                            console.log(eachArray);
-                      }
-
 
                   }
-
-
-
-
-
-
 
 
             }

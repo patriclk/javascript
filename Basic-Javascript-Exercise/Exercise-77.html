@@ -25,23 +25,27 @@
 
         <script>
             function myFunction(input1,input2){
-            var input1 = parseInt(document.getElementById("first").value,10).toString().split(" ");
-            var input2 = parseInt(document.getElementById("second").value,10).toString().split(" ");
-
+                var input1 = parseInt(document.getElementById("first").value,10).toString().split(" ");
+                var input2 = parseInt(document.getElementById("second").value,10).toString().split(" ");
+                console.log("in1: " +input1);
+                console.log("in2: " + input2);
                 var stringa=[];
-                 stringa.push(input1);
-                 stringa.push(input2);
+                stringa.push(input1);
+                stringa.push(input2);
                 console.log(stringa);
 
 
-               if(stringa.includes(1) || stringa.includes(3)){
-                   return true;
-               }else{
-                   return false;
-               }
+               if(stringa.indexOf(1)!=-1 || stringa.indexOf(3)!=-1){
 
+                   console.log("it's true!");
+
+                   var result1  = `true`;
+               }else{
+                   var result1 = `false`;
+               }
+document.getElementById("result").value = result1;
            }
-            document.getElementById("result").value = myFunction();
+
 
         </script>
     </body>

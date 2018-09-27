@@ -39,21 +39,32 @@
             console.log(matches[0]);
             console.log(matches[1]);
             */
+
+            /*
+
+            Array.prototype.move = function(from,to){
+              this.splice(to,0,this.splice(from,1)[0]);
+              return this;
+            };
+            */
+
+
             function  array_element_replace(){
 
-            var inputString =["e","m","i","t","H","l","i","h","c"];
-            var positions = [];
-            for(var i=0; i<inputString.length; i++){
-                if(inputString[i].match(/[A-Z]/) != null){
-                    positions.push(i);
+                var newString = [];
+                var inputString =["e","m","i","t","L","L","i","H","C"];
 
-                    for(var j =0;j<positions.length;i++){
-                        inputString.unshift(positions[i]);
-                        console.log(inputString);
+                for(var i=0; i<inputString.length; i++){
+                    if(inputString[i].match(/[A-Z]/) != null){
+
+                        newString.unshift(inputString[i]);
+                        //inputString.move(i,0);
+                    }
+                    else {
+                        newString.push(inputString[i]);
                     }
                 }
-            }
-
+                console.log(newString);
             }
 
 
