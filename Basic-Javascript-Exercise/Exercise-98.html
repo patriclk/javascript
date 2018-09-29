@@ -22,6 +22,7 @@
         </style>
 
         <script>
+            var text;
             function myFunction(){
                 myFunction1("Write");
                  addElement(text);
@@ -33,12 +34,20 @@
 
 
             function myFunction1(arr){
-               let result =0;
-               for(let i=1;i<arr.length;i++){
-                   //why not can set i =0.
-                  result += Math.abs(arr[i]-arr[0]);
+               var UPPcase =0;
+               var LOWERcase =0;
+                for(var i=0;i<arr.length;i++){
+                    if(/[A-Z]/.test(arr[i])){
+                        UPPcase++;
+                    }else{
+                        LOWERcase++;
+                    }
                 }
-                text = result;
+                if(UPPcase>LOWERcase){
+                     text =arr.toUpperCase();
+                }else{
+                     text = arr.toLowerCase();
+                }
             }
 
             function addElement(text){
