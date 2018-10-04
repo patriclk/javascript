@@ -19,30 +19,59 @@
                 display: inline-block; width: 300px; text-align: left;
             }
         </style>
-          <img src="../images/exercise-100.png"/>
+          <img src="../images/exercise-101.png"/>
         <script>
             function myFunction(){
-                myFunction1([1,2,3], [3,4,5]);
+                myFunction1('xYr');
                  addElement(text);
 
-                myFunction1([1,2,3], [5,6,7]);
+                myFunction1('XXyx');
+                 addElement(text);
+
+                myFunction1('0yx');
                  addElement(text);
             }
 
 
+            function myFunction1(arr1){
+                 var result,
+                     result1,
+                     result2;
 
-
-            function myFunction1(arr1,arr2){
-                for(var i=0;i<arr1.length;i++){
-                    if(arr2.indexOf(arr1[i]) != -1){
-                        var result = `true`;
+              var latin= /[\u0000-\u007f]/;
+                if(latin.test(arr1)){
+                     result=true;
                     }else{
-                        var result = `false`;
+                     result=false;
                     }
-                }
-                 text = result;
-                }
 
+                for(var i=0;i<arr1.length;i++){
+                    var j =i+1;
+                    var charcode =arr1.charCodeAt(i);
+                    var charcode1=arr1.charCodeAt(j);
+
+
+                    if((charcode >= 97 && charcode <=122) && (charcode1 >=97 && charcode1 <=122)){
+                        result1=false;
+                    }else{
+                        result1=true;
+                    }
+
+
+                    if((charcode >=64 && charcode <=90) && (charcode1 >=65 && charcode1 <=90)){
+                        result2=false;
+                    }else{
+                        result2=true;
+                    }
+
+                     if(result && result1 && result2){
+                          text= true;
+                      }else{
+                          text=false;
+                          break;
+                      }
+                    }
+                 }
 
 
             function addElement(text){
