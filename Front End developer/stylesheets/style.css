@@ -1,0 +1,14 @@
+  .wallpaper{
+   height: auto;
+   width: 100%;
+ }
+
+.home-title-all{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.home-title-all li{
+  display: inline-block;
+}
