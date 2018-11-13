@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Exercise-104</title>
+    </head>
+
+    <body  onload="myFunction()">
+
+        <h1>JavaScript Exercise-104</h1>
+
+        <p>Write a JavaScript program to find two elements of the array such that their absolute difference is not greater than a given integer but is as close to the said integer.
+        </p>
+
+
+
+        <style>
+            body, input{
+                font-size: 25px;
+            }
+            form{
+                display: inline-block; width: 300px; text-align: left;
+            }
+        </style>
+
+        <script>
+            function myFunction(){
+
+
+                myFunction1([12, 10, 33, 34], 10);
+                 addElement(text);
+
+                myFunction1([12, 10, 33, 34], 24);
+                 addElement(text);
+
+                myFunction1([12, 10, 33, 44], 40);
+                 addElement(text);
+            }
+
+
+            function myFunction1(arr, N){
+                let mostVariable = -1;
+
+                for(let i =0;i<arr.length;i++){
+                    for(let j=i+1;j<arr.length;j++){
+                        let different =Math.abs(arr[j]-arr[i]);
+                        if(different <=N){
+                            mostVariable=Math.max(different,mostVariable)
+                        }
+                    }
+                }
+                text = mostVariable;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function addElement(text){
+              var para = document.createElement("p");
+              var text1 =document.createTextNode(text);
+              para.appendChild(text1);
+              document.body.appendChild(para);
+            }
+        </script>
+    </body>
+</html>
