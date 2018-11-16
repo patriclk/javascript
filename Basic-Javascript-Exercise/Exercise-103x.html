@@ -54,12 +54,7 @@
                     copyArr.splice(i,1);
                     console.log("ending with: ", copyArr);
 
-                    var numberStr = "";
-                    for(let j=0; j<copyArr.length;j++){
-                        numberStr += copyArr[j];
-                    }
-
-                    console.log("numberStr: "+ numberStr);
+                   var numberStr =copyArr.join("");
 
                     var number = parseInt(numberStr);
                     if(bigNumber < number) {
