@@ -26,32 +26,64 @@
         <script>
             function myFunction(){
 
-
                 myFunction1(1245);
-                 addElement(text);
+                addElement(text);
 
                 myFunction1(10);
-                 addElement(text);
+                addElement(text);
 
                 myFunction1(100);
-                 addElement(text);
+                addElement(text);
+
+                myFunction1(2819);
+                addElement(text);
             }
 
 
             function myFunction1(arr){
+                let newArr = arr.toString().split("");
+                console.log(newArr);
+                let empty= [];
+                let newnNumber;
+                let bigNumber =0;
+
+                for(let i=0;i<newArr.length;i++){
+                    var copyArr = newArr.slice();
+                    console.log("starting with: ", copyArr);
+                    console.log("remove this: " + newArr[i]);
+                    copyArr.splice(i,1);
+                    console.log("ending with: ", copyArr);
+
+                    var numberStr = "";
+                    for(let j=0; j<copyArr.length;j++){
+                        numberStr += copyArr[j];
+                    }
+
+                    console.log("numberStr: "+ numberStr);
+
+                    var number = parseInt(numberStr);
+                    if(bigNumber < number) {
+                        bigNumber = number;
+                    }
+
+                    /*
+                    empty=newArr;
+                    console.log(empty);
+                    newnNumber=parseInt("empty",10);
+                    console.log(newnNumber);
+                        if(newnNumber>BigNumber){
+                           BigNumber=newnNumber;
+                        }
+
+                    */
 
 
 
+                }
+                text = bigNumber;
 
 
-
-
-
-
-
-
-
-
+            }
 
 
             function addElement(text){
